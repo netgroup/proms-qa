@@ -1,0 +1,18 @@
+# Design handoff bundle and reference materials — not part of the shipped app
+eprom-quality-assessment-ui/
+docs/
+
+# Stray root-level artifact from earlier npm invocations (real lockfile lives in eprom-app/)
+/package-lock.json
+
+# macOS / editor cruft
+.DS_Store
+**/.DS_Store
+
+# Node / Vite artifacts inside the app
+eprom-app/node_modules/
+eprom-app/dist/
+eprom-app/.vite/
+eprom-app/npm-debug.log*
+eprom-app/yarn-debug.log*
+eprom-app/yarn-error.log*
