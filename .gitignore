@@ -11,8 +11,9 @@ docs/
 
 # Node / Vite artifacts inside the app
 eprom-app/node_modules/
-eprom-app/dist/
 eprom-app/.vite/
 eprom-app/npm-debug.log*
 eprom-app/yarn-debug.log*
 eprom-app/yarn-error.log*
+# eprom-app/dist/ is committed so GitHub Pages can serve it directly today;
+# the deploy-pages workflow rebuilds it on push, so this commit is a safety net.
