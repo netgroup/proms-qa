@@ -331,8 +331,20 @@ const baseUrl = import.meta.env.BASE_URL
       <!-- HERO -->
       <section style="margin-bottom:34px">
         <div style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--primary);margin-bottom:12px">{{ t.kicker }}</div>
-        <h1 style="margin:0 0 14px;font-size:38px;line-height:1.08;letter-spacing:-.025em;font-weight:600;max-width:18ch">{{ t.heroTitle }}</h1>
-        <p style="margin:0;font-size:16px;color:var(--text-2);max-width:60ch">{{ t.heroBody }}</p>
+        <h1 style="margin:0 0 14px;font-size:38px;line-height:1.08;letter-spacing:-.025em;font-weight:600;max-width:22ch">{{ t.heroTitle }}</h1>
+        <p style="margin:0 0 12px;font-size:16px;color:var(--text-2)">
+          {{ t.heroIntro }}
+          <i>ePROMs-QA: Assessing Response Quality in Remotely Administered Patient-Reported Outcome Measures</i>
+          {{ t.paperStatus }}.
+        </p>
+        <p style="margin:0 0 12px;font-size:16px;color:var(--text-2)">
+          {{ t.heroHow1 }}<a href="#" @click.prevent="downloadTemplate" style="color:var(--primary);font-weight:600">{{ t.heroTemplateLink }}</a>{{ t.heroHow2 }}
+        </p>
+        <p style="margin:0;font-size:16px;color:var(--text-2)">
+          {{ t.heroPrivacy }}
+          {{ t.heroContact }}
+          <a href="mailto:giorgia.panico@uniroma2.it" style="color:var(--primary);font-weight:600">{{ t.heroContactLink }}</a>.
+        </p>
         <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:22px">
           <div style="display:flex;align-items:center;gap:11px;background:var(--primary-tint);border:1px solid color-mix(in srgb,var(--primary) 26%,transparent);padding:11px 15px;border-radius:12px">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -677,7 +689,7 @@ const baseUrl = import.meta.env.BASE_URL
       </section>
 
       <!-- LEGEND -->
-      <section style="margin-top:22px;padding:18px 22px;background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow)">
+      <section v-if="outputTables" style="margin-top:22px;padding:18px 22px;background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow)">
         <div style="font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);margin-bottom:13px">{{ t.legendTitle }}</div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
           <div style="display:flex;align-items:center;gap:10px"><span style="width:11px;height:11px;border-radius:50%;background:var(--green);flex:none;box-shadow:0 0 0 3px var(--green-tint)"></span><span style="font-size:12.5px"><b style="font-weight:600">{{ t.high }}</b> · {{ t.legHigh }}</span></div>

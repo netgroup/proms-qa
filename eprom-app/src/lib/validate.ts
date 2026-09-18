@@ -12,6 +12,8 @@ const MAPS_HEADERS = {
   featureType: 'featuretype',
   min: 'min',
   max: 'max',
+  minFull: 'minimum value',
+  maxFull: 'maximum value',
 }
 
 function issue(
@@ -105,8 +107,8 @@ export function validateWorkbook(wb: ParsedWorkbook, config: AppConfig): Validat
   // MAPS structure
   const mapsColName = wb.maps.headerMap.get(MAPS_HEADERS.columnName)
   const mapsFeatureType = wb.maps.headerMap.get(MAPS_HEADERS.featureType)
-  const mapsMin = wb.maps.headerMap.get(MAPS_HEADERS.min)
-  const mapsMax = wb.maps.headerMap.get(MAPS_HEADERS.max)
+  const mapsMin = wb.maps.headerMap.get(MAPS_HEADERS.minFull) ?? wb.maps.headerMap.get(MAPS_HEADERS.min)
+  const mapsMax = wb.maps.headerMap.get(MAPS_HEADERS.maxFull) ?? wb.maps.headerMap.get(MAPS_HEADERS.max)
 
   if (mapsColName === undefined || mapsFeatureType === undefined) {
     push(

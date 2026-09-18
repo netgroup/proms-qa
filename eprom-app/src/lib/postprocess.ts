@@ -13,27 +13,27 @@ interface DesReliability {
   confidence: number
 }
 
+// Mirrors the Python report: classification is driven by the posterior region
+// probabilities P(reliability > hi) and P(reliability < lo), not by the median.
+// The label is the region with the highest posterior mass; confidence is that mass.
 function classifyReliability(
   samples: number[],
   hi: number,
   lo: number,
 ): DesReliability {
   const n = samples.length
-  const sorted = samples.slice().sort((a, b) => a - b)
-  const median = sorted[Math.floor(n / 2)]
-  if (median > hi) {
-    let c = 0
-    for (const v of samples) if (v > hi) c++
-    return { label: 'HIGH', confidence: c / n }
+  let cHigh = 0
+  let cLow = 0
+  for (const v of samples) {
+    if (v > hi) cHigh++
+    else if (v < lo) cLow++
   }
-  if (median < lo) {
-    let c = 0
-    for (const v of samples) if (v < lo) c++
-    return { label: 'LOW', confidence: c / n }
-  }
-  let c = 0
-  for (const v of samples) if (v >= lo && v <= hi) c++
-  return { label: 'MEDIUM', confidence: c / n }
+  const pHigh = cHigh / n
+  const pLow = cLow / n
+  const pMid = 1 - pHigh - pLow
+  if (pHigh >= pMid && pHigh >= pLow) return { label: 'HIGH', confidence: pHigh }
+  if (pLow >= pMid) return { label: 'LOW', confidence: pLow }
+  return { label: 'MEDIUM', confidence: pMid }
 }
 
 interface FamilySeq {

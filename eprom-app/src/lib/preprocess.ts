@@ -21,8 +21,8 @@ interface MapRow {
 function buildMapIndex(wb: ParsedWorkbook): Map<string, MapRow> {
   const idxCol = wb.maps.headerMap.get('column name')!
   const idxFt = wb.maps.headerMap.get('featuretype')!
-  const idxMin = wb.maps.headerMap.get('min')
-  const idxMax = wb.maps.headerMap.get('max')
+  const idxMin = wb.maps.headerMap.get('minimum value') ?? wb.maps.headerMap.get('min')
+  const idxMax = wb.maps.headerMap.get('maximum value') ?? wb.maps.headerMap.get('max')
   const out = new Map<string, MapRow>()
   for (const r of wb.maps.rows) {
     const name = r[idxCol] == null ? '' : String(r[idxCol]).trim()

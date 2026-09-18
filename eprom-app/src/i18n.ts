@@ -7,7 +7,14 @@ export interface Dict {
   privacyLong: string
   kicker: string
   heroTitle: string
-  heroBody: string
+  heroIntro: string
+  paperStatus: string
+  heroHow1: string
+  heroTemplateLink: string
+  heroHow2: string
+  heroPrivacy: string
+  heroContact: string
+  heroContactLink: string
   step1: string
   step1sub: string
   step2: string
@@ -86,20 +93,30 @@ export interface Dict {
 }
 
 const EN: Dict = {
-  productName: 'ePROM Quality Assessment',
+  productName: 'PROMs Quality Assessment',
   tagline: 'Reliability scoring for remote patient questionnaires',
   privacyShort: 'Runs in your browser',
   privacyLong: '100% in-browser processing — no data sent to any server',
   kicker: 'Clinical questionnaire quality control',
-  heroTitle: 'Upload a file. Download the assessment.',
-  heroBody:
-    'Load the Excel export of your questionnaire responses. The tool scores each patient’s reliability and flags anomalous questionnaires — entirely on your device. Everything else on this page is just there to explain it.',
-  step1: 'Upload',
-  step1sub: 'Drop the .xlsx exported from the template',
-  step2: 'Analyze',
-  step2sub: 'Runs locally, no upload to a server',
-  step3: 'Download',
-  step3sub: 'Get reliability & anomaly scores as .xlsx',
+  heroTitle: 'PROMs Quality Assessment',
+  heroIntro:
+    'This system assesses the response quality of patient-reported outcome measures (PROMs). The methodology is described in the article',
+  paperStatus: '(submitted for publication)',
+  heroHow1:
+    'The idea is simple: add a few control questions to a standard medical questionnaire (PROMs) — for example repeated questions, or questions whose answer is already known. Collect the patients’ responses, arrange them in the format of the ',
+  heroTemplateLink: 'Excel template',
+  heroHow2:
+    ' and upload the file here. A simulation will estimate which questionnaires and which patients are reliable according to this methodology.',
+  heroPrivacy:
+    'No data ever reaches a server: although this is a website, everything stays local and runs entirely in your browser.',
+  heroContact: 'For more information,',
+  heroContactLink: 'write to the authors',
+  step1: 'Download the template',
+  step1sub: 'Get the Excel template (.xlsx)',
+  step2: 'Fill in & upload',
+  step2sub: 'Enter your data in the template and upload it',
+  step3: 'Run the analysis',
+  step3sub: 'Everything runs locally, no upload to a server',
   stepLabel: 'Step',
   uploadTitle: 'Upload your responses',
   downloadTemplate: 'Download Excel template',
@@ -173,20 +190,30 @@ const EN: Dict = {
 }
 
 const IT: Dict = {
-  productName: 'ePROM Quality Assessment',
+  productName: 'PROMs Quality Assessment',
   tagline: 'Valutazione dell’affidabilità dei questionari clinici da remoto',
   privacyShort: 'Gira nel tuo browser',
   privacyLong: 'Elaborazione 100% nel browser — nessun dato inviato a server',
   kicker: 'Controllo qualità dei questionari clinici',
-  heroTitle: 'Carica un file. Scarica la valutazione.',
-  heroBody:
-    'Carica l’esportazione Excel delle risposte ai questionari. Lo strumento valuta l’affidabilità di ogni paziente e segnala i questionari anomali — interamente sul tuo dispositivo. Tutto il resto in questa pagina serve solo a spiegarlo.',
-  step1: 'Carica',
-  step1sub: 'Trascina il file .xlsx esportato dal template',
-  step2: 'Analizza',
-  step2sub: 'Calcolo locale, nessun invio a un server',
-  step3: 'Scarica',
-  step3sub: 'Ottieni affidabilità e anomalie in .xlsx',
+  heroTitle: 'PROMs Quality Assessment',
+  heroIntro:
+    'Questo sistema permette di valutare la qualità delle risposte ai questionari somministrati ai pazienti (PROMs). La metodologia è spiegata nell’articolo',
+  paperStatus: '(submitted for publication)',
+  heroHow1:
+    'L’idea è semplice: aggiungi a un questionario medico standard (PROMs) alcune domande di controllo, ad esempio domande ripetute o domande la cui risposta è nota. Raccogli le risposte dei pazienti, riportale nel formato del ',
+  heroTemplateLink: 'template Excel',
+  heroHow2:
+    ' e carica qui il file. Una simulazione stimerà quali questionari e quali pazienti sono attendibili secondo questa metodologia.',
+  heroPrivacy:
+    'Nessun dato transita sui server: anche se è un sito web, tutti i dati restano locali e vengono elaborati solo nel tuo browser.',
+  heroContact: 'Per maggiori informazioni,',
+  heroContactLink: 'scrivi agli autori',
+  step1: 'Scarica il template',
+  step1sub: 'Scarica il template Excel (.xlsx)',
+  step2: 'Compila e carica',
+  step2sub: 'Inserisci i tuoi dati nel template e caricalo',
+  step3: 'Lancia l’analisi',
+  step3sub: 'Tutto gira in locale, nessun invio a un server',
   stepLabel: 'Passo',
   uploadTitle: 'Carica le risposte',
   downloadTemplate: 'Scarica template Excel',
