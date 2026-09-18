@@ -691,14 +691,24 @@ const baseUrl = import.meta.env.BASE_URL
       <!-- LEGEND -->
       <section v-if="outputTables" style="margin-top:22px;padding:18px 22px;background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow)">
         <div style="font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);margin-bottom:13px">{{ t.legendTitle }}</div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
-          <div style="display:flex;align-items:center;gap:10px"><span style="width:11px;height:11px;border-radius:50%;background:var(--green);flex:none;box-shadow:0 0 0 3px var(--green-tint)"></span><span style="font-size:12.5px"><b style="font-weight:600">{{ t.high }}</b> · {{ t.legHigh }}</span></div>
-          <div style="display:flex;align-items:center;gap:10px"><span style="width:11px;height:11px;border-radius:50%;background:var(--amber);flex:none;box-shadow:0 0 0 3px var(--amber-tint)"></span><span style="font-size:12.5px"><b style="font-weight:600">{{ t.medium }}</b> · {{ t.legMed }}</span></div>
-          <div style="display:flex;align-items:center;gap:10px"><span style="width:11px;height:11px;border-radius:50%;background:var(--red);flex:none;box-shadow:0 0 0 3px var(--red-tint)"></span><span style="font-size:12.5px"><b style="font-weight:600">{{ t.low }}</b> · {{ t.legLow }}</span></div>
-          <div style="display:flex;align-items:center;gap:10px"><span style="width:11px;height:11px;border-radius:50%;background:var(--red);flex:none;box-shadow:0 0 0 3px var(--red-tint)"></span><span style="font-size:12.5px"><b style="font-weight:600">{{ t.anomYes }}</b> · {{ t.legAnomYes }}</span></div>
-          <div style="display:flex;align-items:center;gap:10px"><span style="width:11px;height:11px;border-radius:50%;background:var(--green);flex:none;box-shadow:0 0 0 3px var(--green-tint)"></span><span style="font-size:12.5px"><b style="font-weight:600">{{ t.anomNo }}</b> · {{ t.legAnomNo }}</span></div>
-          <div style="display:flex;align-items:center;gap:10px"><span style="width:11px;height:11px;border-radius:50%;background:var(--text-3);flex:none;box-shadow:0 0 0 3px var(--surface-3)"></span><span style="font-size:12.5px"><b style="font-weight:600">{{ t.legNeutralT }}</b> · {{ t.legNeutral }}</span></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
+          <div>
+            <div style="font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);margin-bottom:9px">{{ t.participants }}</div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="display:flex;align-items:center;gap:10px"><span style="width:11px;height:11px;border-radius:50%;background:var(--green);flex:none;box-shadow:0 0 0 3px var(--green-tint)"></span><span style="font-size:12.5px"><b style="font-weight:600">{{ t.high }}</b> · {{ t.legHigh }}</span></div>
+              <div style="display:flex;align-items:center;gap:10px"><span style="width:11px;height:11px;border-radius:50%;background:var(--amber);flex:none;box-shadow:0 0 0 3px var(--amber-tint)"></span><span style="font-size:12.5px"><b style="font-weight:600">{{ t.medium }}</b> · {{ t.legMed }}</span></div>
+              <div style="display:flex;align-items:center;gap:10px"><span style="width:11px;height:11px;border-radius:50%;background:var(--red);flex:none;box-shadow:0 0 0 3px var(--red-tint)"></span><span style="font-size:12.5px"><b style="font-weight:600">{{ t.low }}</b> · {{ t.legLow }}</span></div>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);margin-bottom:9px">{{ t.questionnaires }}</div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="display:flex;align-items:center;gap:10px"><span style="width:11px;height:11px;border-radius:50%;background:var(--red);flex:none;box-shadow:0 0 0 3px var(--red-tint)"></span><span style="font-size:12.5px"><b style="font-weight:600">{{ t.anomYes }}</b> · {{ t.legAnomYes }}</span></div>
+              <div style="display:flex;align-items:center;gap:10px"><span style="width:11px;height:11px;border-radius:50%;background:var(--green);flex:none;box-shadow:0 0 0 3px var(--green-tint)"></span><span style="font-size:12.5px"><b style="font-weight:600">{{ t.anomNo }}</b> · {{ t.legAnomNo }}</span></div>
+            </div>
+          </div>
         </div>
+        <div style="display:flex;align-items:center;gap:10px;margin-top:14px;padding-top:12px;border-top:1px solid var(--border)"><span style="width:11px;height:11px;border-radius:50%;background:var(--text-3);flex:none;box-shadow:0 0 0 3px var(--surface-3)"></span><span style="font-size:12.5px;color:var(--text-2)"><b style="font-weight:600">{{ t.legNeutralT }}</b> · {{ t.legNeutral }}</span></div>
       </section>
     </main>
 
