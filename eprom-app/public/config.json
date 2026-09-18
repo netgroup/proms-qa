@@ -10,9 +10,9 @@
     "Conscientiousness inventory": "direct",
     "Acquiescence inventory": "direct",
     "Cognitive Reflection Tests": "direct",
+    "Reverse-Coded Items and Repeated Questions": "direct",
     "Response Time Analysis": "fatigue",
     "Attention Checks": "fatigue",
-    "Reverse-Coded Items and Repeated Questions": "fatigue",
     "Pattern Analysis": "fatigue"
   },
   "reliabilityHighThreshold": 0.8,
