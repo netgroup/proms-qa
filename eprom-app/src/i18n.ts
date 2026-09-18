@@ -95,7 +95,7 @@ export interface Dict {
 const EN: Dict = {
   productName: 'PROMs Quality Assessment',
   tagline: 'Reliability scoring for remote patient questionnaires',
-  privacyShort: 'Runs in your browser',
+  privacyShort: 'GDPR compliant — data never leaves your browser',
   privacyLong: '100% in-browser processing — no data sent to any server',
   kicker: 'Clinical questionnaire quality control',
   heroTitle: 'PROMs Quality Assessment',
@@ -192,7 +192,7 @@ const EN: Dict = {
 const IT: Dict = {
   productName: 'PROMs Quality Assessment',
   tagline: 'Valutazione dell’affidabilità dei questionari clinici da remoto',
-  privacyShort: 'Gira nel tuo browser',
+  privacyShort: 'Conforme al GDPR — i dati non lasciano il tuo browser',
   privacyLong: 'Elaborazione 100% nel browser — nessun dato inviato a server',
   kicker: 'Controllo qualità dei questionari clinici',
   heroTitle: 'PROMs Quality Assessment',
